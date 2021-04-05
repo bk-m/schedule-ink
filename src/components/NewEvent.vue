@@ -27,17 +27,17 @@ export default class NewEvent extends Vue {
     participants: [],
   };
 
-  submit() {
+  submit(): void {
     console.log("********************");
     console.log(this.event);
   }
 
-  affe() {
+  affe(): void {
     const serialized = serializeService.dumps(this.event);
-    console.log('*** SER');
+    console.log("*** SER");
     console.log(serialized);
     const unmarshalled = serializeService.loads(serialized);
-    console.log('*** UNSER');
+    console.log("*** UNSER");
     console.log(unmarshalled);
   }
 }

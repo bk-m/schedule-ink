@@ -21,7 +21,8 @@ const routes: Array<RouteConfig> = [
   {
     path: "/new-event",
     name: "NewEvent",
-    component: () => import(/* webpackChunkName: "event" */ "../views/NewEventView.vue"),
+    component: () =>
+      import(/* webpackChunkName: "event" */ "../views/NewEventView.vue"),
   },
   {
     path: "/event/:base64String",
