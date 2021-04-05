@@ -16,8 +16,17 @@ const routes: Array<RouteConfig> = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue"),
+    component: () => import(/* webpackChunkName: "about" */ "../views/About.vue"),
+  },
+  {
+    path: "/new-event",
+    name: "NewEvent",
+    component: () => import(/* webpackChunkName: "event" */ "../views/NewEventView.vue"),
+  },
+  {
+    path: "/event/:base64String",
+    name: "Event",
+    component: () => import(/* webpackChunkName: "event" */ "../views/EventView.vue"),
   },
 ];
 

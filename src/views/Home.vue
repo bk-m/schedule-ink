@@ -1,18 +1,13 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+    <ul>
+      <li><router-link to="/">Home</router-link></li>
+      <li>
+        <router-link :to="{ name: 'Event', params: { base64String: 'AFFE' } }"
+          >Event</router-link
+        >
+      </li>
+      <li><router-link to="/new-event">New Event</router-link></li>
+    </ul>
   </div>
 </template>
-
-<script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
-import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
-
-@Component({
-  components: {
-    HelloWorld,
-  },
-})
-export default class Home extends Vue {}
-</script>

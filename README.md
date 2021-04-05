@@ -1,4 +1,5 @@
 # schedule-ink
+A small scheduling app, maily to test Vue
 
 ## Project setup
 ```
